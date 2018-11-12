@@ -1,3 +1,6 @@
+
+shake.startWatch(rollDice, 40);
+
 //set dice-svgs
 var num1 = '<circle cx="200" cy="200" r="40" fill="black"/>';
 var num2 = '<circle cx="100" cy="100" r="40" fill="black"/><circle cx="300" cy="300" r="40" fill="black"/>';
@@ -8,13 +11,10 @@ var num6 = num4 + '<circle cx="100" cy="200" r="40" fill="black"/><circle cx="30
 //write dice-svgs into array
 var diceSVG = [num1, num2, num3, num4, num5, num6];
 
-
-
 //add EventListener to rollButton on body load
 function init() {
+	shake.startWatch(rollDice, 40);
 	document.getElementById('rollButton').addEventListener('touchstart', rollDice);
-	shake.startWatch(rollDice);
-
 }
 
 
@@ -32,8 +32,10 @@ function rollDice(){
 /* ---------- simple roll-function with random svg and without any animation ---------- */
 //write random dice-svg between 1 and 6 into "dice-div"
 
-var rollDice = function() {
+var rollDice = function () {
+	shake.stopWatch();
 	document.getElementById('dice').innerHTML = '<svg viewBox="0 0 400 400" >' + diceSVG[Math.floor(Math.random() * 6)] + '</svg>';
+	shake.startWatch(rollDice, 40);
 }
 
 
