@@ -13,8 +13,17 @@ var diceSVG = [num1, num2, num3, num4, num5, num6];
 
 //add EventListener to rollButton on body load
 function init() {
-	shake.startWatch(rollDice, 40);
+	shake.startWatch(onShake, 30, onShakeError);
 	document.getElementById('rollButton').addEventListener('touchstart', rollDice);
+}
+
+var onShake = function () {
+	alert("onShake event");
+	document.getElementById('dice').innerHTML = 'Ficken';
+}
+
+var onShakeError = function () {
+	alert("onShakeError occurred");
 }
 
 
@@ -33,9 +42,7 @@ function rollDice(){
 //write random dice-svg between 1 and 6 into "dice-div"
 
 var rollDice = function () {
-	shake.stopWatch();
 	document.getElementById('dice').innerHTML = '<svg viewBox="0 0 400 400" >' + diceSVG[Math.floor(Math.random() * 6)] + '</svg>';
-	shake.startWatch(rollDice, 40);
 }
 
 
