@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <widget version="1.0.0">
-    <name>Webdicer Light</name>
+    <name>webDicer LIGHT</name>
     <description>
-        Webdicer Light is an simple Dice-App.
+        webDicer LIGHT is an simple Dice-App.
     </description>
     <author>
         Jonas Balsiger
@@ -22,8 +22,55 @@
     <plugin name="cordova-plugin-device-orientation" spec="2.0.1" />
     <plugin name="cordova-plugin-splashscreen" spec="5.0.2" />
     <plugin name="cordova-plugin-statusbar" spec="2.4.2" />
-    <plugin name="cordova-plugin-device-motion" spec="2.0.1" />
-    <plugin name="cordova-plugin-shake" spec="0.6.0" />
+    
+    <!-- Icons and Splashscreens-->
+    <platform name="android">
+        <icon qualifier="ldpi" src="assets/media/icons/android/drawable-ldpi-icon.png" />
+        <icon qualifier="mdpi" src="assets/media/icons/android/drawable-mdpi-icon.png" />
+        <icon qualifier="hdpi" src="assets/media/icons/android/drawable-hdpi-icon.png" />
+        <icon qualifier="xhdpi" src="assets/media/icons/android/drawable-xhdpi-icon.png" />
+        <icon qualifier="xxhdpi" src="assets/media/icons/android/drawable-xxhdpi-icon.png" />
+        <icon qualifier="xxxhdpi" src="assets/media/icons/android/drawable-xxxhdpi-icon.png" />
+        <splash qualifier="land-ldpi" src="assets/media/screens/android/drawable-land-ldpi-screen.png" />
+        <splash qualifier="land-mdpi" src="assets/media/screens/android/drawable-land-mdpi-screen.png" />
+        <splash qualifier="land-hdpi" src="assets/media/screens/android/drawable-land-hdpi-screen.png" />
+        <splash qualifier="land-xhdpi" src="assets/media/screens/android/drawable-land-xhdpi-screen.png" />
+        <splash qualifier="land-xxhdpi" src="assets/media/screens/android/drawable-land-xxhdpi-screen.png" />
+        <splash qualifier="land-xxxhdpi" src="assets/media/screens/android/drawable-land-xxxhdpi-screen.png" />
+        <splash qualifier="port-ldpi" src="assets/media/screens/android/drawable-port-ldpi-screen.png" />
+        <splash qualifier="port-mdpi" src="assets/media/screens/android/drawable-port-mdpi-screen.png" />
+        <splash qualifier="port-hdpi" src="assets/media/screens/android/drawable-port-hdpi-screen.png" />
+        <splash qualifier="port-xhdpi" src="assets/media/screens/android/drawable-port-xhdpi-screen.png" />
+        <splash qualifier="port-xxhdpi" src="assets/media/screens/android/drawable-port-xxhdpi-screen.png" />
+        <splash qualifier="port-xxxhdpi" src="assets/media/screens/android/drawable-port-xxxhdpi-screen.png" />
+    </platform>
+    <platform name="ios">
+        <icon height="57" platform="ios" src="assets/media/icons/ios/icon.png" width="57" />
+        <icon height="114" platform="ios" src="assets/media/icons/ios/icon@2x.png" width="114" />
+        <icon height="40" platform="ios" src="assets/media/icons/ios/icon-40.png" width="40" />
+        <icon height="80" platform="ios" src="assets/media/icons/ios/icon-40@2x.png" width="80" />
+        <icon height="50" platform="ios" src="assets/media/icons/ios/icon-50.png" width="50" />
+        <icon height="100" platform="ios" src="assets/media/icons/ios/icon-50@2x.png" width="100" />
+        <icon height="60" platform="ios" src="assets/media/icons/ios/icon-60.png" width="60" />
+        <icon height="120" platform="ios" src="assets/media/icons/ios/icon-60@2x.png" width="120" />
+        <icon height="180" platform="ios" src="assets/media/icons/ios/icon-60@3x.png" width="180" />
+        <icon height="72" platform="ios" src="assets/media/icons/ios/icon-72.png" width="72" />
+        <icon height="144" platform="ios" src="assets/media/icons/ios/icon-72@2x.png" width="144" />
+        <icon height="76" platform="ios" src="assets/media/icons/ios/icon-76.png" width="76" />
+        <icon height="152" platform="ios" src="assets/media/icons/ios/icon-76@2x.png" width="152" />
+        <icon height="29" platform="ios" src="assets/media/icons/ios/icon-small.png" width="29" />
+        <icon height="58" platform="ios" src="assets/media/icons/ios/icon-small@2x.png" width="58" />
+        <icon height="87" platform="ios" src="assets/media/icons/ios/icon-small@3x.png" width="87" />
+        <splash height="1136" platform="ios" src="assets/media/screens/ios/Default-568h@2x~iphone.png" width="640" />
+        <splash height="1334" platform="ios" src="assets/media/screens/ios/Default-667h.png" width="750" />
+        <splash height="2208" platform="ios" src="assets/media/screens/ios/Default-736h.png" width="1242" />
+        <splash height="1242" platform="ios" src="assets/media/screens/ios/Default-Landscape-736h.png" width="2208" />
+        <splash height="1536" platform="ios" src="assets/media/screens/ios/Default-Landscape@2x~ipad.png" width="2048" />
+        <splash height="768" platform="ios" src="assets/media/screens/ios/Default-Landscape~ipad.png" width="1024" />
+        <splash height="2048" platform="ios" src="assets/media/screens/ios/Default-Portrait@2x~ipad.png" width="1536" />
+        <splash height="1024" platform="ios" src="assets/media/screens/ios/Default-Portrait~ipad.png" width="768" />
+        <splash height="960" platform="ios" src="assets/media/screens/ios/Default@2x~iphone.png" width="640" />
+        <splash height="480" platform="ios" src="assets/media/screens/ios/Default~iphone.png" width="320" />
+    </platform>
 
-    <!-- Icon -->
 </widget>
