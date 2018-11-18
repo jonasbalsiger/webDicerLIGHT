@@ -16,8 +16,7 @@ function init() {
 	document.getElementById('rollButton').addEventListener('touchstart', rollDice);
 }
 function onDeviceReady(){
-	//shake.startWatch(onShake, 40, onError);
-	document.getElementById('dice').innerHTML = 'hallo';
+	shake.startWatch(onShake, 40, onError);
 }
 // Stop watching for shake gestures
 //shake.stopWatch()
