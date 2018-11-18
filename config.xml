@@ -22,7 +22,7 @@
     <plugin name="cordova-plugin-device-orientation" spec="2.0.1" />
     <plugin name="cordova-plugin-splashscreen" spec="5.0.2" />
     <plugin name="cordova-plugin-statusbar" spec="2.4.2" />
-    <!-- <plugin name="cordova-plugin-device-motion" spec="2.0.1" /> -->
+    <plugin name="cordova-plugin-device-motion" spec="2.0.1" />
     <plugin name="cordova-plugin-shake" spec="0.6.0" />
 
     <!-- Icon -->
