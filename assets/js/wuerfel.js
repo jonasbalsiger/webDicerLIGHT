@@ -12,8 +12,11 @@ var diceSVG = [num1, num2, num3, num4, num5, num6];
 
 //add EventListener to rollButton on body load
 function init() {
-	shake.startWatch(onShake, 40, onError);
+	document.addEventListener("deviceready", onDeviceReady, false);
 	document.getElementById('rollButton').addEventListener('touchstart', rollDice);
+}
+function onDeviceReady(){
+	shake.startWatch(onShake, 40, onError);
 }
 // Stop watching for shake gestures
 //shake.stopWatch()
