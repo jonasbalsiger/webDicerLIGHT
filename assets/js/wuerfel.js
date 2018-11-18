@@ -16,7 +16,8 @@ function init() {
 	document.getElementById('rollButton').addEventListener('touchstart', rollDice);
 }
 function onDeviceReady(){
-	shake.startWatch(onShake, 40, onError);
+	shake.startWatch(onShake, 30);
+	document.getElementById('dice').innerHTML = '!';
 }
 // Stop watching for shake gestures
 //shake.stopWatch()
@@ -27,14 +28,12 @@ function rollDice() {
 	document.getElementById('dice').innerHTML = '<svg viewBox="0 0 400 400" >' + diceSVG[Math.floor(Math.random() * 6)] + '</svg>';
 }
 
-
 var onShake = function () {
+	shake.stopWatch()
 	document.getElementById('dice').innerHTML = '<svg viewBox="0 0 400 400" >' + diceSVG[Math.floor(Math.random() * 6)] + '</svg>';
+	shake.startWatch(onShake, 30);
 };
 
-var onError = function () {
-	document.getElementById('dice').innerHTML = '?';
-};
 
 
 
