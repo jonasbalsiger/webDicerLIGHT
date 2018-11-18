@@ -10,7 +10,6 @@
     </author>
 
     <!-- General settings -->
-    <preference name="orientation"                value="portrait" />   <!-- all os: default means both landscape and portrait are enabled -->
     <preference name="target-device"              value="universal" />  <!-- all os: possible values handset, tablet, or universal -->
     <preference name="fullscreen"                 value="true" />       <!-- all os: hides the status bar at the top of the screen -->
     <preference name="webviewbounce"              value="false" />      <!-- ios: control whether the screen 'bounces' when scrolled beyond the top -->
@@ -23,7 +22,7 @@
     <plugin name="cordova-plugin-device-orientation" spec="2.0.1" />
     <plugin name="cordova-plugin-splashscreen" spec="5.0.2" />
     <plugin name="cordova-plugin-statusbar" spec="2.4.2" />
-    <plugin name="cordova-plugin-device-motion" spec="2.0.1" />
+    <!-- <plugin name="cordova-plugin-device-motion" spec="2.0.1" /> -->
     <plugin name="cordova-plugin-shake" spec="0.6.0" />
 
     <!-- Icon -->

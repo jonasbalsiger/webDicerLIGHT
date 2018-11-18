@@ -1,3 +1,4 @@
+/* general style */
 @font-face {
   font-family: 'Black Ops One';
   src: url(BlackOpsOne.ttf);
@@ -9,11 +10,12 @@ html,body{
   width: 100%;
   height: 100%;
   overflow: hidden;
+  margin:0;
+  padding:0;
   background: #222222;
   color: #FACC2E;
   font-size:20px;
-  padding:0;
-  margin:0;
+  text-align: center;
 }
 
 a {
@@ -21,91 +23,125 @@ a {
   text-decoration: none;
 }
 
-/* Startseite */
+
+/* landing page */
 #logo{
-  width: 75%;
-  margin: 4% 12.5% 0% 12.5%;
-  padding-bottom:75%;
+  width: 75vw;
+  height: 75vw;
+  margin: 4vw 12.5vw 0 12.5vw;
   background: url(logo.png);
   background-size: cover;
 }
 
-.button{
-  text-align: center;
-  width: 60%;
-  margin: 4% 20%;
-  padding: 2% 0;
-  border: 5px solid #FACC2E;
+.option-button{
+  width: 60vw;
+  margin: 4vw 20vw;
+  padding: 2vw 0;
+  border: 0.75vw solid #FACC2E;
   box-sizing: border-box;
-  border-radius: 2vw;
+  border-radius: 1.5vw;
   font-size: 4vw;
 }
 
-.button:active{
+.option-button:active{
   background: #FACC2E;
   color:#222222;
 }
 
 .copyright{
   clear: left;
-  width: 50%;
-  padding-top: 6%;
-  margin: 0 25%;
+  width: 50vw;
+  margin: 0 25vw;
+  padding-top: 6vw;
   font-size: 2vw;
-  text-align: center;
 }
 
-/* Würfel-Styles */
-#dices{
-  width: 100%;
+
+/* main contentarea */
+#main-content{
+  position: relative;
   float: left;
   clear: left;
+  width: 100vw;
+  height: 100vh;
   margin: 0;
-  position: relative;
-  text-align:center;
 }
 
+/* dice styles */
 .dice{
-  margin:10%;
+  display:inline-block;
+  width: 80vw;
+  height: 80vw;
+  margin: 10vw;
+  box-sizing: border-box;
+  border:0;
+  border-radius: 5vw;
   background: #FACC2E;
   color:#ffffff;
-  width: 80%;
-  height:0;
-  display:inline-block;
-  font-size:68vw;
-  padding-bottom:80%;
-  border:0;
-  box-sizing: border-box;
-  border-radius: 5vw;
+  font-size: 68vw;
 }
 
 
-/* Control-Bar-Style */
+/* controls style (bottom) */
 #controls{
-  background: #404040;
   position: absolute;
   bottom: 0;
-  width: 100%;
-  padding: 3% 0 3% 0;
+  width: 100vw;
+  height:auto;
   margin: 0;
-  text-align:center;
+  padding: 4vw 0;
+  background: #404040;
 }
 
 #rollButton{
-  text-align: center;
-  width: 50%;
-  margin: 0% 25%;
-  padding: 2% 0;
-  border: 5px solid #FACC2E;
+  float: left;
+  width:45vw;
+  height:15vw;
+  margin: 0 27.5vw;
+  padding-top: 3vw;
+  background: #ffffff;
+  border: 0.75vw solid #FACC2E;
   box-sizing: border-box;
-  border-radius: 2vw;
-  font-size: 4vw;
-  font-size: 10vw;
-  float:left;
-  padding:1.4% 2% 0% 2%;
+  border-radius: 1.5vw;
   font-size:9vw;
+  line-height: 9vw;
 }
 
-@media screen and (orientation: landscape) {
 
+/* additional styles for orientation landscape  (optional)*/
+@media screen and (orientation: landscape) {
+  #logo{
+    width: 30vw;
+    height:30vw;
+    margin: 1vw 35vw 0 35vw;
+  }
+  .option-button{
+    width: 30vw;
+    margin: 2vw 35vw;
+    padding: 2vw 0;
+    border: 1vh solid #FACC2E;
+    font-size: 3vw;
+}
+.copyright{
+  padding-top: 5vh;
+  font-size: 2vh;
+}
+  .dice{
+    width:60vh;
+    height: 60vh;
+    margin: 5vw 20vh 10vh 20vh;
+    font-size: 50vh;
+  }
+  #controls{
+    padding: 4vh 0;
+  }
+  #rollButton{
+    width: 30vw;
+    height: 15vh;
+    margin: 0 35vw;
+    padding-top:2.5vh;
+    border: 1vh solid #FACC2E;
+    font-size: 9vh;
+    line-height: 9vh;
+  }
 }

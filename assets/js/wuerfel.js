@@ -5,23 +5,33 @@ var num3 = num1 + num2;
 var num4 = num2 + '<circle cx="100" cy="300" r="40" fill="black"/><circle cx="300" cy="100" r="40" fill="black"/>';
 var num5 = num4 + num1;
 var num6 = num4 + '<circle cx="100" cy="200" r="40" fill="black"/><circle cx="300" cy="200" r="40" fill="black"/>';
+
 //write dice-svgs into array
 var diceSVG = [num1, num2, num3, num4, num5, num6];
 
+
 //add EventListener to rollButton on body load
 function init() {
+	shake.startWatch(onShake, 40, onError);
 	document.getElementById('rollButton').addEventListener('touchstart', rollDice);
-	shake.startWatch(onShake, 30, onShakeError);
 }
+// Stop watching for shake gestures
+//shake.stopWatch()
+
+/* ---------- simple roll-function with random svg and without any animation ---------- */
+//write random dice-svg between 1 and 6 into "dice-div"
+function rollDice() {
+	document.getElementById('dice').innerHTML = '<svg viewBox="0 0 400 400" >' + diceSVG[Math.floor(Math.random() * 6)] + '</svg>';
+}
+
 
 var onShake = function () {
-	alert("onShake event");
-	document.getElementById('dice').innerHTML = 'Ficken';
-}
+	document.getElementById('dice').innerHTML = '<svg viewBox="0 0 400 400" >' + diceSVG[Math.floor(Math.random() * 6)] + '</svg>';
+};
 
-var onShakeError = function () {
-	alert("onShakeError occurred");
-}
+var onError = function () {
+	document.getElementById('dice').innerHTML = '?';
+};
 
 
 
@@ -32,17 +42,6 @@ function rollDice(){
 	document.getElementById('dice').innerHTML =  Math.ceil(Math.random()*6);
 }
 */
-
-
-
-/* ---------- simple roll-function with random svg and without any animation ---------- */
-//write random dice-svg between 1 and 6 into "dice-div"
-
-rollDice = function () {
-	document.getElementById('dice').innerHTML = '<svg viewBox="0 0 400 400" >' + diceSVG[Math.floor(Math.random() * 6)] + '</svg>';
-}
-
-
 
 
 /* ---------- roll-function with random number and simple "animation" ---------- */
@@ -63,7 +62,6 @@ function rollDice() {
 	timer = setInterval(animDice,40);
 }
 */
-
 
 
 /* ---------- roll-function with random svg and simple "animation" ---------- */
