@@ -12,28 +12,14 @@ var diceSVG = [num1, num2, num3, num4, num5, num6];
 
 //add EventListener to rollButton on body load
 function init() {
-	document.addEventListener("deviceready", onDeviceReady, false);
 	document.getElementById('rollButton').addEventListener('touchstart', rollDice);
 }
-function onDeviceReady(){
-	shake.startWatch(onShake, 30);
-	document.getElementById('dice').innerHTML = '!';
-}
-// Stop watching for shake gestures
-//shake.stopWatch()
 
 /* ---------- simple roll-function with random svg and without any animation ---------- */
 //write random dice-svg between 1 and 6 into "dice-div"
 function rollDice() {
 	document.getElementById('dice').innerHTML = '<svg viewBox="0 0 400 400" >' + diceSVG[Math.floor(Math.random() * 6)] + '</svg>';
 }
-
-var onShake = function () {
-	shake.stopWatch()
-	document.getElementById('dice').innerHTML = '<svg viewBox="0 0 400 400" >' + diceSVG[Math.floor(Math.random() * 6)] + '</svg>';
-	shake.startWatch(onShake, 30);
-};
-
 
 
 
