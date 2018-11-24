@@ -15,25 +15,26 @@ function init() {
 	document.getElementById('rollButton').addEventListener('touchstart', rollDice);
 }
 
+
+/* ---------- simplest roll-function with random number and without any animation ---------- */
+//write random number between 1 and 6 into "dice-div"
+/*
+function rollDice() {
+	document.getElementById('dice').innerHTML = Math.ceil(Math.random() * 6);
+}
+
+
+
 /* ---------- simple roll-function with random svg and without any animation ---------- */
 //write random dice-svg between 1 and 6 into "dice-div"
+/*
 function rollDice() {
 	document.getElementById('dice').innerHTML = '<svg viewBox="0 0 400 400" >' + diceSVG[Math.floor(Math.random() * 6)] + '</svg>';
 }
 
 
-
-/* ---------- simplest roll-function with random number and without any animation ---------- */
-//write random number between 1 and 6 into "dice-div"
-/*
-function rollDice(){
-	document.getElementById('dice').innerHTML =  Math.ceil(Math.random()*6);
-}
-*/
-
-
 /* ---------- roll-function with random number and simple "animation" ---------- */
-/*
+
 //write random number between 1 and 6 into "dice-div" ("Animation": write random number numRolls times with intervall 40ms)
 function rollDice() {
 	document.getElementById('rollButton').removeEventListener('touchstart', rollDice);
@@ -49,7 +50,7 @@ function rollDice() {
 	}
 	timer = setInterval(animDice,40);
 }
-*/
+
 
 
 /* ---------- roll-function with random svg and simple "animation" ---------- */
